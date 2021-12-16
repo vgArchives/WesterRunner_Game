@@ -36,6 +36,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "TouchPositionTest",
+                    "type": "PassThrough",
+                    "id": "62f0c66b-8f54-4d9a-a0df-40d4148ecc66",
+                    "expectedControlType": "Integer",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -86,7 +94,7 @@
                 {
                     "name": "",
                     "id": "66e3484f-756d-462e-b890-2642fae04440",
-                    "path": "<Touchscreen>/primaryTouch/press",
+                    "path": "<Touchscreen>/touch0/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "Smartphone",
@@ -102,6 +110,17 @@
                     "processors": "",
                     "groups": "Smartphone",
                     "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d9a6e6d-1e55-45c8-8db0-078d76d906a3",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPositionTest",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/EndlessRunner/Scripts/PlayerInputs.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/EndlessRunner/Scripts/Player/PlayerInputs.inputactions'
 
 using System;
 using System.Collections;
@@ -47,6 +47,14 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""8a72b314-adb2-4be4-8e66-c93525273b0b"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""TouchPositionTest"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""62f0c66b-8f54-4d9a-a0df-40d4148ecc66"",
+                    ""expectedControlType"": ""Integer"",
                     ""processors"": """",
                     ""interactions"": ""Press""
                 }
@@ -99,7 +107,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""66e3484f-756d-462e-b890-2642fae04440"",
-                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""path"": ""<Touchscreen>/touch0/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Smartphone"",
@@ -115,6 +123,17 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Smartphone"",
                     ""action"": ""TouchPosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d9a6e6d-1e55-45c8-8db0-078d76d906a3"",
+                    ""path"": ""<Touchscreen>/primaryTouch"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPositionTest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -141,6 +160,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         m_Inputs_Jump = m_Inputs.FindAction("Jump", throwIfNotFound: true);
         m_Inputs_TouchPress = m_Inputs.FindAction("TouchPress", throwIfNotFound: true);
         m_Inputs_TouchPosition = m_Inputs.FindAction("TouchPosition", throwIfNotFound: true);
+        m_Inputs_TouchPositionTest = m_Inputs.FindAction("TouchPositionTest", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -194,6 +214,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_Inputs_Jump;
     private readonly InputAction m_Inputs_TouchPress;
     private readonly InputAction m_Inputs_TouchPosition;
+    private readonly InputAction m_Inputs_TouchPositionTest;
     public struct InputsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -202,6 +223,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Inputs_Jump;
         public InputAction @TouchPress => m_Wrapper.m_Inputs_TouchPress;
         public InputAction @TouchPosition => m_Wrapper.m_Inputs_TouchPosition;
+        public InputAction @TouchPositionTest => m_Wrapper.m_Inputs_TouchPositionTest;
         public InputActionMap Get() { return m_Wrapper.m_Inputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -223,6 +245,9 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @TouchPosition.started -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPosition;
                 @TouchPosition.performed -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPosition;
                 @TouchPosition.canceled -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPosition;
+                @TouchPositionTest.started -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPositionTest;
+                @TouchPositionTest.performed -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPositionTest;
+                @TouchPositionTest.canceled -= m_Wrapper.m_InputsActionsCallbackInterface.OnTouchPositionTest;
             }
             m_Wrapper.m_InputsActionsCallbackInterface = instance;
             if (instance != null)
@@ -239,6 +264,9 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @TouchPosition.started += instance.OnTouchPosition;
                 @TouchPosition.performed += instance.OnTouchPosition;
                 @TouchPosition.canceled += instance.OnTouchPosition;
+                @TouchPositionTest.started += instance.OnTouchPositionTest;
+                @TouchPositionTest.performed += instance.OnTouchPositionTest;
+                @TouchPositionTest.canceled += instance.OnTouchPositionTest;
             }
         }
     }
@@ -258,5 +286,6 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnTouchPress(InputAction.CallbackContext context);
         void OnTouchPosition(InputAction.CallbackContext context);
+        void OnTouchPositionTest(InputAction.CallbackContext context);
     }
 }

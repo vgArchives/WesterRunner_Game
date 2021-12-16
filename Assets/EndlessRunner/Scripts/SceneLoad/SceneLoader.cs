@@ -20,7 +20,7 @@ public sealed class SceneLoader : MonoBehaviour
     }
 
     private void OnEnable() 
-    {
+    {        
         GameManagerSO.OnLoadScene += LoadLevel;    
     }
 

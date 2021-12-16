@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b281c58246a6a4783d92c737ca34a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotation: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 150, z: 0}
   _gameManager: {fileID: 11400000, guid: fd9fd6d7e6e55bd47b920cbed7d02ef7, type: 2}
 --- !u!114 &2070386140773991668
 MonoBehaviour:

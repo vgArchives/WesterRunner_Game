@@ -34,6 +34,6 @@ MonoBehaviour:
   - name: SideMove
     audioSource: {fileID: 0}
     clip: {fileID: 8300000, guid: 4a3860e7a066d684d8da43b5299e42c7, type: 3}
-    volume: 0.5
+    volume: 0.7
     pitch: 1
     loop: 0

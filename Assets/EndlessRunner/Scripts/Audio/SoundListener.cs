@@ -4,7 +4,7 @@ public sealed class SoundListener : MonoBehaviour
 {
     [SerializeField] private AudioManagerSO _audioManager;
 
-    public AudioManagerSO AudioManager { get => _audioManager;}
+    public AudioManagerSO AudioManager { get => _audioManager; }
 
     public void Initialize(AudioManagerSO audioManager)
     {
